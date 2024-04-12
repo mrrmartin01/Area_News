@@ -1,11 +1,11 @@
 import React from 'react'
 
-const Footer = () => {
+const Loading = () => {
   return (
     <div>
-      Footer
+      loading
     </div>
   )
 }
 
-export default Footer
+export default Loading

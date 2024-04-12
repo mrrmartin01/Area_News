@@ -1,11 +1,12 @@
+"use client"
 import React from 'react'
 
-const Footer = () => {
+const error = () => {
   return (
     <div>
-      Footer
+      error
     </div>
   )
 }
 
-export default Footer
+export default error
