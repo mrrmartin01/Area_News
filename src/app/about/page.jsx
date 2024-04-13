@@ -1,11 +1,15 @@
-import React from 'react'
+import Image from "next/image";
+import React from "react";
+import styles from "./about.module.css";
 
 const AboutPage = () => {
   return (
     <div>
-      About
+      <div className={styles.imgContainer}>
+        <Image src={"/about.png"} alt="about" fill />
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default AboutPage
+export default AboutPage;
