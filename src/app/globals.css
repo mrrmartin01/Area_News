@@ -34,7 +34,7 @@ a {
 .container {
   min-height: 100vh;
   margin: auto;
-  padding: 0 20px; /* Adjust padding according to your design */
+  padding: 0 20px; 
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -43,6 +43,6 @@ a {
 
 @media (max-width: 768px) {
   .container {
-    padding: 0 10px; /* Adjust padding for smaller screens */
+    padding: 0 10px;
   }
 }
