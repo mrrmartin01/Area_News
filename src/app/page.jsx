@@ -4,8 +4,8 @@ function page() {
   return (
     <div className={styles.container}>
       <div className={styles.textContainer}>
-        <h1>Welcome to Area News! Your hub for all things local</h1>
-        <p>
+        <h1 className={styles.title}>Welcome to Area News! Your hub for all things local</h1>
+        <p className={styles.description}>
           Dive in and discover what&apos;s happening in your area! Stay
           informed, stay connected.
         </p>
@@ -13,7 +13,7 @@ function page() {
           <button className={styles.button}>Learn more</button>
           <button className={styles.button}>Contact</button>
         </div>
-        <div className={StyleSheetList.brands}>
+        <div className={styles.brands}>
           <Image
             src={"/brands.png"}
             alt="brands"
@@ -22,7 +22,7 @@ function page() {
           />
         </div>
       </div>
-      <div className={styles.imageContainer}>
+      <div className={styles.imgContainer}>
         <Image
           src={"/hero.gif"}
           alt="hero"
