@@ -43,8 +43,9 @@
     cursor: pointer;
 }
 
-@media (max-width:400px){
+@media (max-width:768px){
     .container {
         flex-direction: column;
+        text-align: center;
     }
 }

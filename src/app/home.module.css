@@ -1,33 +1,33 @@
-.container{
+.container {
     display: flex;
     gap: 10px;
     margin-bottom: 5%;
 }
 
-.textContainer{
+.textContainer {
     flex: 1;
-    display:flex;
+    display: flex;
     flex-direction: column;
     gap: 50px;
 }
 
-.title{
+.title {
     font-size: 50px;
 
 }
 
-.description{
+.description {
     font-size: 20px;
 }
 
-.buttons{
-    display:flex;
+.buttons {
+    display: flex;
     gap: 10px;
     align-items: center;
     justify-content: start;
 }
 
-.button{
+.button {
     padding: 10px;
     min-width: 10px;
     cursor: pointer;
@@ -35,55 +35,45 @@
     border-radius: 5px;
     font-weight: bold;
     font-size: 15px;
-} 
+}
 
-.button:first-child{
+.button:first-child {
     background-color: var(--btn);
     color: var(--textSoft);
 }
 
-.imgContainer{
+.imgContainer {
     position: relative;
     flex: 1;
     filter: brightness(80%) contrast(120%);
 
 }
 
-.brands{
+.brands {
     width: 500px;
     height: 50px;
     position: relative;
     filter: grayscale(100%);
 }
 
-@media (max-width: 400px) {
-    .container{
-        display: flex;
+@media (max-width: 1024px) {
+    .container {
         flex-direction: column;
-        justify-content: center;
-        gap: 10px;
-        overflow-x: hidden;
+        text-align: center;
     }
 
-    .textContainer{
-        flex: 1;
-        gap: 30px;
+    .buttons{
+        justify-content: center;
     }
-    
-    .title{
-        text-wrap: wrap;
-        font-size: 30px;
-    
-    }
-    
-    .description{
-        font-size: 10px;
+}
+
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 64px;
     }
 
     .brands{
         width: 100%;
-        height: 50px;
-        position: relative;
-        filter: grayscale(50%);
     }
-  }
+}

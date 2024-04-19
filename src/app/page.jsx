@@ -28,7 +28,7 @@ function page() {
           alt="hero"
           className={styles.heroImg}
           fill
-          // sizes="(max-width: 480px) 120px, (min-width: 481px) and (max-width: 1024px) 120px, 150px"
+          sizes="(max-width: 480px) 120px, (min-width: 481px) and (max-width: 1024px) 120px, 150px"
         />
       </div>
     </div>
