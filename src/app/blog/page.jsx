@@ -1,6 +1,6 @@
 import styles from "./blog.module.css";
 import PostCard from "../../components/postCard/PostCard";
-import { getPost, getPosts } from "../../lib/data";
+import { getPosts } from "../../lib/data";
 
 
 
