@@ -1,19 +1,25 @@
 .container{
     display: flex;
-    /* flex-direction: column; */
-    gap: 5px ;
-}
-
-.title{
-    color: gray;
-    font-weight: bold;
-}
-
-.username{
-    font-weight: 500;
-}
-
-.avatar{
+    align-items: center;
+  }
+  
+  .avatar{
     object-fit: cover;
     border-radius: 50%;
-}
+    margin-right:10%;
+  }
+  
+  .texts{
+    display: flex;
+    flex-direction:column;
+    gap: 5px;
+  }
+  
+  .title{
+    color: gray;
+    font-weight: bold;
+  }
+  
+  .username{
+    font-weight: 500;
+  }

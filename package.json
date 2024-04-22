@@ -16,6 +16,7 @@
     "react-dom": "^18"
   },
   "devDependencies": {
+    "@types/webidl-conversions": "^7.0.3",
     "eslint": "^8",
     "eslint-config-next": "14.1.0"
   }
