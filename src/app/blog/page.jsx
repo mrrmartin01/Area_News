@@ -3,15 +3,14 @@ import PostCard from "../../components/postCard/PostCard";
 import { getPosts } from "../../lib/data";
 
 
+export const metadata = {
+  title: "Blogs",
+  description: "Area news blogs",
+};
+
 
 const BlogPage = async () => {
-
-  // FETCH DATA WITH AN API
   const posts = await getPosts();
-
-  // FETCH DATA WITHOUT AN API
-  // const posts = await getPosts();
-
   return (
     <div className={styles.container}>
       {posts.map((post) => (
