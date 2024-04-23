@@ -8,6 +8,7 @@ const ServerActionTestPage = () => {
         <input type="text" placeholder="desc" name="desc" />
         <input type="text" placeholder="slug" name="slug" />
         <input type="text" placeholder="userId" name="userId" />
+        <input type="text" placeholder="img" name="img" />
         <button type="submit">Add Post</button>
       </form>
       <form action={deletePost}>

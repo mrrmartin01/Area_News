@@ -7,7 +7,7 @@ const PostCard = ({ post }) => {
     <div className={styles.container}>
       <div className={styles.top}>
         {post.img && (
-          <div className={styles.imgContainer}>
+          <div className={styles.imgContainer} key={post.id}>
             <Image src={post.img} alt="" fill className={styles.img} />
           </div>
         )}
