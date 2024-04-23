@@ -4,17 +4,15 @@ import PostUser from "../../../components/postUser/PostUser";
 import { Suspense } from "react";
 import { getPost } from "../../../lib/data";
 
-
-export const generateMetadata =async ({params}) =>{
+export const generateMetadata = async ({ params }) => {
   const { slug } = params;
   const post = await getPost(slug);
 
-  return{
-    title:post.title,
-    description:post.desc,
+  return {
+    title: post.title,
+    description: post.desc,
   };
 };
-
 
 const SingleBlog = async ({ params }) => {
   const { slug } = params;
@@ -34,7 +32,9 @@ const SingleBlog = async ({ params }) => {
           </Suspense>
           <div className={styles.detailText}>
             <span className={styles.detailTitle}>Published</span>
-            <span className={styles.detailValue}>{post.createdAt.toString().slice(4,16)}</span>
+            <span className={styles.detailValue}>
+              {post.createdAt.toString().slice(4, 16)}
+            </span>
           </div>
         </div>
         <div className={styles.content}>{post.desc}</div>
