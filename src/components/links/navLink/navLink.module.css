@@ -6,10 +6,12 @@
     text-align: center;
 }
 
-.navItems:hover{
-    color: #494848;
-    font-size: 20px;
+
+.navItems:hover {
+    color: #084ed1;
+    font-weight:700;
 }
+
 
 .active{
     background-color:var(--light);

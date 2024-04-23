@@ -15,7 +15,9 @@ const NavLink = ({ item }) => {
         pathName === item.path && styles.active
       }`}
     >
-      <span className={`${pathName !== item.path && styles.navItems}`}>{item.title}</span>
+      <span className={`${pathName !== item.path && styles.navItems}`}>
+        {item.title}
+      </span>
     </Link>
   );
 };

@@ -5,7 +5,7 @@ import { Suspense } from "react";
 import { getPost } from "../../../lib/data";
 
 
-export const getMetadata =async ({params}) =>{
+export const generateMetadata =async ({params}) =>{
   const { slug } = params;
   const post = await getPost(slug);
 
@@ -14,6 +14,7 @@ export const getMetadata =async ({params}) =>{
     description:post.desc,
   };
 };
+
 
 const SingleBlog = async ({ params }) => {
   const { slug } = params;
