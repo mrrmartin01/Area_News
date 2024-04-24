@@ -26,10 +26,10 @@ export const addPost = async (formData) => {
 
 
 export const deletePost = async (formData) => {
-    const {id} = Object.fromEntries(formData)
+    const {slug} = Object.fromEntries(formData)
     try{
         connectToDb()
-        await Post.findByIdAndDelete(id)
+        await Post.findByIdAndDelete(slug)
         console.log("Post deleted successfully")
         revalidatePath("/blog")
     }
