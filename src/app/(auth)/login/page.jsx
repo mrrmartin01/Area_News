@@ -1,12 +1,8 @@
 import React from 'react'
-import { signIn } from '../../../lib/auth'
+import { auth} from '../../../lib/auth'
+import { handleGithubLogin } from '../../../lib/action'
 
-const LoginPage = () => {
-  const handleGithubLogin= async () => {
-    "use server"
-
-    await signIn("github");
-  }
+const LoginPage = async () => {
 
   return (
     <div>
