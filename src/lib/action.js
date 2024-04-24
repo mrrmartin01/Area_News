@@ -5,6 +5,7 @@ import { Post } from "./models"
 import { connectToDb } from "./utils"
 import { signIn, signOut } from "./auth"
 import { User } from "./models";
+import bcrypt from "bcrypt";
 
 
 export const addPost = async (formData) => {
@@ -44,19 +45,15 @@ export const deletePost = async (formData) => {
 
 
 export const handleGithubLogin = async () => {
-    "use server"
-
     await signIn("github");
 }
 
 export const handleLogout = async () => {
-    "use server"
-
     await signOut();
 }
 
 export const register = async (formData) => {
-    const { username, email, password, img, passwordRepeat } = object.fromEntries(formData);
+    const { username, email, password, img, passwordRepeat } = Object.fromEntries(formData);
     if (password !== passwordRepeat) {
         return "Passwords do not match";
     }
@@ -64,16 +61,20 @@ export const register = async (formData) => {
     try {
         connectToDb();
 
-        const user = User.findOne({ username });
+        const user = await User.findOne({ username });
 
         if (user) {
             return "User already exists";
         }
 
+        const salt = await bcrypt.genSalt(10);
+        const hashedPassword = await bcrypt.hash(password, salt);
+
+
         const newUser = new User({
             username,
             email,
-            password,
+            password : hashedPassword, 
             img,
         });
         await newUser.save();
