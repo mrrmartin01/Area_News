@@ -9,6 +9,11 @@ const LoginPage = async () => {
       <form action={handleGithubLogin}>
         <button>Login with GitHub</button>
       </form>
+      <form action="">
+        <input type="text" placeholder='username' name='username' />
+        <input type="text" placeholder='password' name='password' />
+        <button>Login</button>
+      </form>
     </div>
   )
 }
