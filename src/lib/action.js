@@ -55,7 +55,7 @@ export const handleLogout = async () => {
 export const register = async (formData) => {
     const { username, email, password, img, passwordRepeat } = Object.fromEntries(formData);
     if (password !== passwordRepeat) {
-        return "Passwords do not match";
+        return {error:"Passwords do not match"};
     }
 
     try {
@@ -64,7 +64,7 @@ export const register = async (formData) => {
         const user = await User.findOne({ username });
 
         if (user) {
-            return "User already exists";
+            return {error:"User already exists"};
         }
 
         const salt = await bcrypt.genSalt(10);

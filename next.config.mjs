@@ -9,6 +9,10 @@ const nextConfig = {
             {
                 protocol: "https",
                 hostname:"c1.wallpaperflare.com"
+            },
+            {
+                protocol: "https",
+                hostname:"c0.wallpaperflare.com"
             }
         ]
     }
