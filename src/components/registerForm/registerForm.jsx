@@ -5,7 +5,7 @@ import { register } from "../../lib/action";
 import styles from "./registerForm.module.css";
 import { useFormState } from "react-dom";
 
-export const registerForm = () => {
+export const RegisterForm = () => {
   const [state, formAction] = useFormState(register, undefined);
   return (
     
